@@ -1,12 +1,8 @@
-## Running your first containers in Kubernetes
-
-Ok, you've run one of the [getting started guides](https://kubernetes.io/docs/user-journeys/users/application-developer/foundational/#section-1) and you have
-successfully turned up a Kubernetes cluster.  Now what?  This guide will help you get oriented
-to Kubernetes and running your first containers on the cluster.
 
 ### Running a container (simple version)
 
-From this point onwards, it is assumed that `kubectl` is on your path from one of the getting started guides.
+
+From this point onwards, it is assumed that `kubectl` is on your path from one of the getting started guides.  
 
 The [`kubectl create`](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create) line below will create a [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) named `my-nginx` to ensure that there are always a [nginx](https://hub.docker.com/_/nginx/) [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/) running.
 
@@ -38,7 +34,7 @@ You can now list the pods to see there is two up and running:
 kubectl get pods
 ```
 
-### Exposing your pods to the internet
+### Exposing your pods to the internet(this will only work if you are integrated with cloud provider)
 
 On some platforms (for example Google Compute Engine) the kubectl command can integrate with your cloud provider to add a [public IP address](https://kubernetes.io/docs/concepts/services-networking/service/#publishing-services---service-types) for the pods,
 to do this run:
